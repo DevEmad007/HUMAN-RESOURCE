@@ -25,10 +25,10 @@ const Footer = () => {
     },ipAddress);
 
     return (
-        <footer className='mb-10 text-center'>
-            <div className='lg:grid grid-cols-2 place-items-center'>
+        <footer className='mb-14 text-center'>
+            <div className='lg:grid grid-cols-1 place-items-center'>
                 <div className='w-full' >
-                    <ul className='my-12 mx-10 md:mx-20 grid gap-4 grid-cols-5 place-items-center justify-center'>
+                    <ul className='my-8 mx-10 md:mx-20 grid gap-4 grid-cols-5 place-items-center justify-center'>
                         <li>
                             <a className='font-bold text-lg' href="https://www.facebook.com/farsidibtihag.yemad?mibextid=ZbWKwL">
                                 <img className=' w-10' src={Facebook} alt="" />
@@ -57,7 +57,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="border-t py-10 mx-10">
+            <div className="border-t py-5 mx-5">
                 <ul className='grid grid-cols-3 gap-4 place-items-center pb-8'>
                     <li >
                         <a className=' border-b tracking-wider' href="#">
