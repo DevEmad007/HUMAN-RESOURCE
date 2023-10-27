@@ -13,6 +13,7 @@ export default {
       },
       gridTemplateColumns: {
         '60/40': '60% 40%',
+        '20/80': '20% 80%',
         '40/60': '30% 70%'
       },
       translate: {

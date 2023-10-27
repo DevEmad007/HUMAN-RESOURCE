@@ -1,9 +1,12 @@
 import React from 'react';
+import ProfileHeader from '../Components/Profile/ProfileHeader/ProfileHeader';
+import ListedPersons from '../Components/ListedPersons/ListedPersons';
 
 const Profile = () => {
     return (
-        <div className=' min-h-vh-1/2 text-center'>
-            No content to show here
+        <div className=' min-h-vh-full text-center'>
+            <ProfileHeader />
+            <ListedPersons />
         </div>
     );
 };

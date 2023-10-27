@@ -10,3 +10,20 @@
 html{
   background-color: #f0f0f0;
 }
+
+@layer utilities {
+  .moveDP{
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .moveBackDP{
+    position: absolute;
+    top: 2.5rem;
+    left: 1.5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+}
