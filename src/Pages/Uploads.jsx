@@ -1,9 +1,10 @@
 import React from 'react';
+import UploadForm from '../Components/UploadForm/UploadForm';
 
 const Uploads = () => {
     return (
-        <div className=' min-h-vh-1/2 text-center'>
-            Nothing to show
+        <div className=' min-h-vh-full '>
+            <UploadForm />
         </div>
     );
 };

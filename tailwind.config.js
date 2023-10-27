@@ -11,6 +11,10 @@ export default {
         'vh-1/2': '50vh',
         'vh-1/4': '25vh',
       },
+      gridTemplateColumns: {
+        '60/40': '60% 40%',
+        '40/60': '30% 70%'
+      },
       translate: {
         's0': '0%',
         's1': '100%',
