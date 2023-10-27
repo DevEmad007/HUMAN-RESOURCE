@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
   -webkit-tap-highlight-color: transparent; /* Safari/Chrome */
   tap-highlight-color: transparent; /* Firefox */
+}
+
+html{
+  background-color: #f0f0f0;
 }

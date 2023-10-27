@@ -2,7 +2,9 @@ import React from 'react';
 
 const Uploads = () => {
     return (
-        <div>Uploads</div>
+        <div className=' min-h-vh-1/2 text-center'>
+            Nothing to show
+        </div>
     );
 };
 

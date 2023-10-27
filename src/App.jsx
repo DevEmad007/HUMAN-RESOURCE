@@ -4,7 +4,7 @@ import Profile from './Pages/Profile';
 import Uploads from './Pages/Uploads';
 import { Route,Routes } from 'react-router-dom';
 import SharedLayout from './SharedLayout';
-import ProductDetails from './Components/ProducDetails/ProductDetails';
+import ProductDetails from './Components/Produc/ProductDetails';
 
 const App = () => {
   return (

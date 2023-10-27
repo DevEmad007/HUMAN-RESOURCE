@@ -1,4 +1,4 @@
-import React,{ useEffect,useLayoutEffect,useRef,useState } from 'react';
+import React,{ useEffect,useRef,useState } from 'react';
 import Facebook from '../../assets/facebook.svg';
 import Instagram from '../../assets/instagram.svg';
 import Github from '../../assets/github.svg';
@@ -12,7 +12,7 @@ const Footer = () => {
     const skipRender = useRef(true);
     const year = new Date().getFullYear();
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => setIpAddress(data.ip));
@@ -25,7 +25,7 @@ const Footer = () => {
     },ipAddress);
 
     return (
-        <footer className='text-center '>
+        <footer className='mb-10 text-center'>
             <div className='lg:grid grid-cols-2 place-items-center'>
                 <div className='w-full' >
                     <ul className='my-12 mx-10 md:mx-20 grid gap-4 grid-cols-5 place-items-center justify-center'>
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="border-t py-10 mx-10">
-                <ul className='grid grid-cols-1 gap-4 pb-8'>
+                <ul className='grid grid-cols-3 gap-4 place-items-center pb-8'>
                     <li >
                         <a className=' border-b tracking-wider' href="#">
                             Privacy Policy
