@@ -38,18 +38,19 @@ const AuthModal = () => {
     return (
         <div
             className={`${show ? 'showAuthModal' : 'hideAuthModal'}
-             absolute bottom-0 left-0 w-full max-w-4xl h-28 flex justify-center items-center border-t-2 border-x-2 border-gray-400 rounded-t-3xl translate-y-full bg-white duration-1000`}
+             absolute bottom-0 left-0 w-full max-w-4xl h-28 flex justify-center items-center border-t-2 border-x-2 border-slate-700 rounded-t-3xl translate-y-full bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50 duration-1000`}
         >
             <button
                 onClick={handleSignIn}
                 className=' mx-10 py-3 
-                font-semibold text-xl text-white 
+                font-semibold text-xl text-slate-100 
                 rounded-xl bg-blue-500 w-full max-w-sm cursor-pointer'
             >
                 Sign In With Google
             </button>
             <Close
                 onClick={() => dispatch(hideAuthModal())}
+                className=' text-slate-900 dark:text-slate-50'
                 sx={{ position: ' relative',bottom: '30%',right: '6px' }}
             />
         </div>

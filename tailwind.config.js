@@ -39,6 +39,9 @@ export default {
         's3': '260%',
         's4': '343%',
         's5': '430%'
+      },
+      backgroundImage: {
+        'header-1': 'linear-gradient(90deg, rgba(177,190,71,1) 0%, rgba(246,177,71,1) 49%, rgba(0,255,209,1) 100%);'
       }
     },
   },

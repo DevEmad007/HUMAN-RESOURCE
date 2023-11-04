@@ -1,4 +1,4 @@
-import React,{ useState,useEffect,useRef } from 'react';
+import React,{ useState,useEffect,useRef,useLayoutEffect } from 'react';
 import BannerItem from './BannerItem';
 
 const Banner = () => {
@@ -28,7 +28,8 @@ const Banner = () => {
         };
     },[]);
 
-    useEffect(() => {
+
+    useLayoutEffect(() => {
         const handleslide = () => {
             if (isVisible) {
                 setIndex(curr => {
@@ -46,23 +47,17 @@ const Banner = () => {
         };
     },[ isVisible ]);
 
-    const animate = () => {
-        return '-translate-x-' + index;
-    };
-
     return (
-        <div className='lg:grid lg:grid-cols-80/20 lg:px-10'>
-            <div className={`m-4  overflow-hidden lg:pl-12`}>
-                <div
-                    ref={elementRef}
-                    style={{ transform: `Translate(${-103 * index}%)` }}
-                    className={`flex gap-3 duration-700 `}>
-                    <BannerItem index={'0'} />
-                    <BannerItem index={'1'} />
-                    <BannerItem index={'2'} />
-                    <BannerItem index={'3'} />
-                    <BannerItem index={'4'} />
-                </div>
+        <div className={`overflow-hidden`}>
+            <div
+                ref={elementRef}
+                style={{ transform: `Translate(calc(${-100 * index}% - ${12 * index}px))` }} //12 px depends on next lines gap class
+                className={`flex gap-3 duration-700 snap-mandatory `}>
+                <BannerItem index={'0'} />
+                <BannerItem index={'1'} />
+                <BannerItem index={'2'} />
+                <BannerItem index={'3'} />
+                <BannerItem index={'4'} />
             </div>
         </div>
     );

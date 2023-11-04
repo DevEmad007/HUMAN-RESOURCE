@@ -6,7 +6,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { hideAuthModal,showAuthModal } from '../../features/AuthModal/authModalSlice';
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
 import { authUpdate } from '../../features/Auth/authSlice';
-import { authStatus } from '../../features/Auth/authOperation';
+
 const BottomNav = () => {
     const auth = getAuth();
     const show = useSelector(store => store.authModal.show);
@@ -18,7 +18,7 @@ const BottomNav = () => {
             if (user) {
                 dispatch(authUpdate(user));
             } else {
-                dispatch(authUpdate(null));
+                // dispatch(authUpdate(null));
                 // User is signed out
             }
         });
@@ -35,7 +35,7 @@ const BottomNav = () => {
     return (
         <div
             className='fixed bottom-0 left-0 w-full  h-14 
-         bg-white border-t-gray-300 border-t z-30'>
+         bg-white dark:bg-slate-900 border-t-slate-100 dark:border-t-slate-400 border-t z-30'>
             <AuthModal />
             <ul className='grid grid-cols-3 pt-2'>
                 <li
@@ -46,7 +46,7 @@ const BottomNav = () => {
                         <NavLink
                             to={'/'}
                         >
-                            <HomeRounded sx={{ fontSize: '36px' }} />
+                            <HomeRounded className=' text-slate-800 dark:text-slate-300' sx={{ fontSize: '36px' }} />
                         </NavLink>
                     </button>
                 </li>
@@ -59,7 +59,7 @@ const BottomNav = () => {
                         <NavLink
                             to={userId ? '/uploads/' : '/'}
                         >
-                            <Upload sx={{ fontSize: '36px' }} />
+                            <Upload className=' text-slate-800 dark:text-slate-300' sx={{ fontSize: '36px' }} />
                         </NavLink>
                     </button>
                 </li>
@@ -72,7 +72,7 @@ const BottomNav = () => {
                         <NavLink
                             to={userId ? `/profile/` : '/'}
                         >
-                            <Person sx={{ fontSize: '36px' }} />
+                            <Person className=' text-slate-800 dark:text-slate-300' sx={{ fontSize: '36px' }} />
                         </NavLink>
                     </button>
                 </li>

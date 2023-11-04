@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ProfileDP = ({ className }) => {
+const ProfileDP = ({ className,src }) => {
     return (
         <>
-            <img className={`bg-red-600 duration-500 rounded-full ${className}`} src="" alt="" />
+            <img className={` duration-500 rounded-full ${className}`} src={src} alt={src} />
         </>
     );
 };
