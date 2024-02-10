@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    userId: null,
-    isLoading: true
+    userId: 'nll',
+    photoURL: null,
+    displayName: null,
+    email: null,
 };
 
 export const authSlice = createSlice({
@@ -11,6 +13,9 @@ export const authSlice = createSlice({
     reducers: {
         authUpdate: (state,action) => {
             state.userId = action.payload?.uid;
+            state.photoURL = action.payload?.photoURL;
+            state.displayName = action.payload?.displayName;
+            state.email = action.payload?.email;
         },
         signIn: (state,action) => {
             state.userId = action.payload?.uid;

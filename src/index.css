@@ -26,4 +26,16 @@ html{
     width: 7rem;
     height: 7rem;
   }
+  .showAuthModal{
+    transform: translateY(00%);
+  }
+  .hideAuthModal {
+    transform: translateY(100%);
+  }
+  .active{
+    background-color: red;
+  }
+  .MuiSvgIcon-root{
+    color: red;
+  }
 }

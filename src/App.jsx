@@ -5,6 +5,7 @@ import Uploads from './Pages/Uploads';
 import { Route,Routes } from 'react-router-dom';
 import SharedLayout from './SharedLayout';
 import ProductDetails from './Components/Produc/ProductDetails';
+import Admin from './Pages/Admin';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path='/products/:id' element={<ProductDetails />} />
         <Route path='/uploads/' element={<Uploads />} />
         <Route path='/profile/' element={<Profile />} />
+        <Route path='/adminpanal/' element={<Admin />} />
       </Route>
     </Routes>
   );
